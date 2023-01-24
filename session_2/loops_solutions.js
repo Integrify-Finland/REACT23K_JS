@@ -39,6 +39,17 @@ while (distance != 0) {
 
 /* 4. Make a program that asks 20 numbers from user. After that the program prints out how many of those numbers where even. */
 
+let even = 0;
+
+for (let counter = 0; counter < 100; counter++) {
+  let input = Number(prompt('Enter a number'));
+
+  if (input % 2 == 0) {
+    even++;
+  }
+}
+console.log('There was', even, 'even numbers');
+
 /* 5. Make a program that asks numbers from the user, until user gives 0 and then program ends. In the end program prints out average of the numbers. */
 
 /* 6. Make a program that asks 25 numbers form the user. In the end program prints out average of the numbers. */
