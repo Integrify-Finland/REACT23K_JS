@@ -1,3 +1,5 @@
+const calcButton = document.querySelector('#calc');
+
 const calcGasoline = (e) => {
   e.preventDefault();
   const price = Number(document.getElementById('price').value);
@@ -17,6 +19,8 @@ const calcGasoline = (e) => {
   answer.textContent = text;
   document.querySelector('#answer').textContent = 'something';
 };
+
+calcButton.addEventListener('click', calcGasoline);
 
 const tempConventer = (id, value) => {
   const val = parseFloat(value);
