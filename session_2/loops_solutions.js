@@ -70,6 +70,44 @@ console.log(average);
 
 /* 6. Make a program that asks 25 numbers form the user. In the end program prints out average of the numbers. */
 
+let sum = 0;
+let counter = 0;
+
+do {
+  let input = Number(prompt('enter a number'));
+  sum += input;
+  counter++;
+} while (counter !== 5);
+
+console.log(`Average was ${sum / counter}`);
+
 /* 7. Make a program that ask first one number from the user. After that the program asks: ”Do you want to continue giving numbers?(y/n)”. If user answers y, the program continues to ask another number. If user answers n, program ends. In the end program prints out average of the numbers. */
 
+let input, confirmation;
+let sum = 0;
+let counter = 0;
+
+while (confirmation != 'n') {
+  input = Number(prompt('Enter your number'));
+  confirmation = prompt('Do you want to continue giving numbers?(y/n)');
+  sum = sum + input;
+  counter++;
+}
+
+console.log(`Average is ${sum / counter}`);
+
 /* 8. Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave. */
+
+let min = 0;
+let input = prompt('How many numbers you want to input?');
+
+for (let n = 0; n < input; n++) {
+  let num = Number(prompt('Enter number'));
+  if (num >= 0 && min == 0) {
+    min = num;
+  } else if (num < min) {
+    min = num;
+  }
+}
+
+console.log(min);
